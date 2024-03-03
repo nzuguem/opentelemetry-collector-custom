@@ -16,7 +16,7 @@ echo 'alias ocb="$HOME/go/bin/builder"' >> ~/.zshrc
 ###  Distribution Manifest
 
 ```yaml
-# collector-custom.yml
+# ocb-config.yml
 
 dist:
   module: github.com/open-telemetry/opentelemetry-collector # the module name for the new distribution
