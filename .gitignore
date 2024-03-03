@@ -1,3 +1,4 @@
 # Local
 .camel*
 build
+.idea
