@@ -1,4 +1,4 @@
-# Custom OpenTelemetry Collector Distrobution
+# Custom OpenTelemetry Collector Distribution
 
 ## Install Go
 
