@@ -21,3 +21,5 @@ jobs:
           file: Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/otelcol-custom
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/otelcol-custom
+          cache-to: type=inline
