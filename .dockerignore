@@ -1,0 +1,3 @@
+build
+!build/otelcol-custom
+test

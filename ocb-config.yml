@@ -1,0 +1,18 @@
+dist:
+  module: github.com/open-telemetry/opentelemetry-collector # the module name for the new distribution
+  name: otelcol-custom # the binary name
+  description: Custom OpenTelemetry Collector distribution
+  output_path: ./build # the path to write the output (sources and binary)
+  version: 1.0.0 # the version for your custom OpenTelemetry Collector
+
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.95.0
+  - gomod: go.opentelemetry.io/collector/exporter/loggingexporter v0.95.0
+  - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.95.0
+
+processors:
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.95.0
+
+receivers:
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.95.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver v0.95.0

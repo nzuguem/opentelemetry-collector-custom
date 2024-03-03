@@ -1,0 +1,15 @@
+services:
+  otelcol-custom:
+    container_name: otelcol-custom
+    build:
+      context: .
+    command:
+      - --config=/etc/otelcol-config.yml
+    volumes:
+      - ./test/otelcol-config.yml:/etc/otelcol-config.yml
+      - ./test/app.log:/app.log
+    develop:
+      watch:
+        - path: ocb-config.yml
+          action: rebuild
+      
