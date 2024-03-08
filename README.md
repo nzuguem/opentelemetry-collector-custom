@@ -24,6 +24,7 @@ dist:
   description: Custom OpenTelemetry Collector distribution
   output_path: ./build # the path to write the output (sources and binary)
   version: 1.0.0 # the version for your custom OpenTelemetry Collector
+  otelcol_version: 0.95.0 # the OpenTelemetry Collector version to use as base for the distribution
 
 exporters:
   - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.95.0
