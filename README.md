@@ -62,6 +62,11 @@ echo '127.0.0.1 - - [03/Mar/2024:12:34:56 +0000] "GET /page.html" 200 1234' >> a
 docker build --push -t nzuguem/otelcol-custom:1.0.0 .
 ```
 
+### On kubernetes via [OTel Operator][otel-operator-tutorial-gh]
+
+> ❗⚠️❗If you're using our own OTel Collector distribution via Kubernetes OTel Operator (`otelcol.spec.image`), then make sure that the version of OTel Operator installed matches the base version of our distribution's collector. In our case, for example, the operator MUST be version 0.95.0.
+
 <!-- Links -->
 [go-install-doc]:https://go.dev/doc/install
 [otelcol-builder-gh]:https://github.com/open-telemetry/opentelemetry-collector/tree/main/cmd/builder
+[otel-operator-tutorial-gh]:https://github.com/nzuguem/opentelemetry-operator-tutorial

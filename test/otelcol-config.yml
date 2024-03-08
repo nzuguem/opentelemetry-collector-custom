@@ -11,10 +11,6 @@ receivers:
 
 exporters:
   debug:
-  logging:
-    verbosity: detailed
-    sampling_initial: 5
-    sampling_thereafter: 200
 
 processors:
   batch:
@@ -24,4 +20,4 @@ service:
     logs:
       receivers: [filelog]
       processors: [batch]
-      exporters: [debug, logging]
+      exporters: [debug]
